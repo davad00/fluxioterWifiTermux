@@ -1,0 +1,55 @@
+[licenses]
+
+# FluxER License Configuration
+# Only these licenses will be accepted by Licensebat
+# FluxER is GPL-3.0, but dependencies may use compatible licenses
+
+accepted = [
+    "MIT",
+    "BSD",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "Apache-2.0",
+    "GPL-3.0",
+    "GPL-3.0-or-later",
+    "GPL-2.0",
+    "GPL-2.0-or-later",
+    "ISC",
+    "CC0-1.0",
+    "Unlicense"
+]
+
+# Explicitly unaccepted licenses (uncomment if needed)
+# unaccepted = ["LGPL", "AGPL-3.0", "proprietary"]
+
+# Note: Only one of 'accepted' or 'unaccepted' can be active
+# If both are defined, only 'accepted' will be considered
+
+[dependencies]
+
+# Dependencies to ignore during license checks
+# Add specific dependencies that may have unclear or missing licenses
+ignored = [
+    # Add any problematic dependencies here
+    # Example: "some-legacy-package"
+]
+
+# Ignore development dependencies (testing, linting, etc.)
+ignore_dev_dependencies = true
+
+# Ignore optional dependencies
+ignore_optional_dependencies = true
+
+[behavior]
+
+# Only run checks when dependency files or .licrc are modified
+# Improves CI/CD performance by skipping unnecessary checks
+run_only_on_dependency_modification = true
+
+# Set to false to block PRs with license violations
+# Recommended: false for strict license compliance
+do_not_block_pr = false
+
+# Additional behavior settings
+# fail_on_warning = false  # Fail build on warnings (not just errors)
+# allow_unknown_licenses = false  # Block dependencies with unknown licenses
