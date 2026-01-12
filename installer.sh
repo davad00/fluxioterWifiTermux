@@ -47,8 +47,8 @@ echo -e "${GREEN}[*] Setting up Fluxion inside Ubuntu...${NC}"
 proot-distro login $DISTRO -- bash -c "
 set -e
 apt-get update -y
-apt-get install -y git wget curl unzip net-tools wireless-tools aircrack-ng hostapd dnsmasq lighttpd php-cgi iptables isc-dhcp-server macchanger
-apt-get install -y reaver bully pixiewps hashcat ettercap-text-only 2>/dev/null || true
+apt-get install -y git wget curl unzip net-tools iw aircrack-ng hostapd dnsmasq lighttpd php-cgi iptables macchanger
+apt-get install -y isc-dhcp-server reaver bully pixiewps hashcat ettercap-text-only 2>/dev/null || true
 
 cd /root
 rm -rf fluxion fluxioterWifiTermux
